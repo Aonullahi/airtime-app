@@ -1,1 +1,1 @@
-web: gunicorn airtime_api.wsgi --log-file -
+web: gunicorn airtime_api.wsgi 
