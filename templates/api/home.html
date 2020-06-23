@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}HNG Airtime App{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript">
+    $(function() {
+        $('form div').formset({
+            extraClasses: ['row1', 'row2', 'row3']
+        })
+    })
+</script>
+<style type="text/css">
+    .add-row {
+        padding-left:18px;
+        background:url({% static 'images/add.png' %}) no-repeat left center;
+        
+    }
+    .delete-row {
+        display:block;
+        margin:6px 0 0 0;
+        padding-left:18px;
+        background:url({% static 'images/delete.png' %}) no-repeat left center;
+    }
+    .dynamic-form { padding: 5px 15px; }
+    .row1 { background-color: #f9f9f9; }
+    .row2 { background-color: #f3f3f3; }
+    .row3 { background-color: #ededed; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div>
+    <div class="entry">
+        <form method="post" action="">
+            {% csrf_token %}
+            {% for form in formset.forms %}
+            <div id="{{ form.prefix }}-row" style="padding-bottom:6px; border-bottom:1px dotted #ccc; margin-bottom:6px;">
+                {{ form.username.label_tag }}<br />
+                {{ form.username }}<br />
+                {{ form.phone_number.label_tag }}<br />
+                {{ form.phone_number }}<br />
+                {{ form.amount.label_tag }}<br />
+                {{ form.amount }}<br />
+                {{ form.network.label_tag }} {{ form.network }} 
+            </div>
+            {% endfor %}
+            <p>
+                {{ formset.management_form }}
+                <input type="submit" value="Submit" />
+            </p>
+        </form>
+    </div>
+</div>
+{% endblock %}
