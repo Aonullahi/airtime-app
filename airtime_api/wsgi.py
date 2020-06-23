@@ -16,9 +16,3 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'airtime_api.settings')
 application = get_wsgi_application()
 
 #deployment
-
-from whitenoise.django import DjangoWhiteNoise
-
-
-application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
