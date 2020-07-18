@@ -31,6 +31,7 @@
 </style>
 {% endblock %}
 
+<<<<<<< HEAD
 
 {% block content %}
 <div>
@@ -62,4 +63,29 @@
     </div>
 </div>
 
+=======
+{% block content %}
+<div>
+    <div class="entry">
+        <form method="post" action="">
+            {% csrf_token %}
+            {% for form in formset.forms %}
+            <div id="{{ form.prefix }}-row" style="padding-bottom:6px; border-bottom:1px dotted #ccc; margin-bottom:6px;">
+                {{ form.username.label_tag }}<br />
+                {{ form.username }}<br />
+                {{ form.phone_number.label_tag }}<br />
+                {{ form.phone_number }}<br />
+                {{ form.amount.label_tag }}<br />
+                {{ form.amount }}<br />
+                {{ form.network.label_tag }} {{ form.network }} 
+            </div>
+            {% endfor %}
+            <p>
+                {{ formset.management_form }}
+                <input type="submit" value="Submit" />
+            </p>
+        </form>
+    </div>
+</div>
+>>>>>>> 7347cd0ce990693e240f6b949494a62660bf324b
 {% endblock %}
