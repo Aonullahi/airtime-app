@@ -141,8 +141,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 #MEDIA_URL = '/static/'
 
 django_heroku.settings(locals())
-<<<<<<< HEAD
-
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-=======
->>>>>>> 7347cd0ce990693e240f6b949494a62660bf324b
