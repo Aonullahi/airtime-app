@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}HNG App{% endblock %} :: HNG Airtime App</title>
+    <link rel="stylesheet" href="{%static 'reset.css'%}"/>
+	<link rel="stylesheet" href="{%static 'styles.css'%}"/>
+
+	
+	{% block extrahead %}{% endblock %}
+</head>
+
+<body class="display">
+    <section class="first">
+        <div class="logo">
+            <img src="{%static 'hng-logo.svg'%}" alt="Hng logo">
+		</div>
+		
+        <div class="functions">
+
+            <p class="home">HOME</p>
+            <p>TRACKS</p>
+            <p>TRANSFER</p>
+            <p class="settings">SETTINGS</p>
+            <p>LOGOUT</p>
+
+        </div>
+    </section>
+    <section class="second">
+        <div>
+            <h1>Beneficiary</h1>
+
+
+            <div class="container">
+				{% block content %}
+		        {% endblock %}
+                
+            </div>
+        </div>
+        <h6>Thank you for using this platform</h6>
+        </div>
+        <div>
+        </div>
+
+    </section>
+</body>
+
+</html>
+
+

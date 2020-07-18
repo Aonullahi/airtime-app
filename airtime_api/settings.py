@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #third party app
     #'rest_framework',
+    'crispy_forms',
     
 
     #local app
@@ -137,3 +138,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 #MEDIA_URL = '/static/'
 
 django_heroku.settings(locals())
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
