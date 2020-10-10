@@ -40,11 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #third party app
     #'rest_framework',
-<<<<<<< HEAD
-    'crispy_forms',
-=======
->>>>>>> 7347cd0ce990693e240f6b949494a62660bf324b
-    
 
     #local app
     'api',

@@ -34,7 +34,8 @@
 {% block content %}
 <div>
     <div class="entry">
-        <form method="post" action="">
+        <h1>Beneficiary</h1>
+        <form method="post" action="" class="form">
             {% csrf_token %}
             {% for form in formset.forms %}
             <div id="{{ form.prefix }}-row" style="padding-bottom:6px; border-bottom:1px dotted #ccc; margin-bottom:6px;">

@@ -3,14 +3,17 @@
 {% block title %}Transaction Result{% endblock %}
 
 {% block content %}
-<div class="post">
-    <h1 class="title">Transaction Result</h1>
+<div >
     <div class="entry">
-        <p>Received data from {{ data|length }} forms.</p>
+        <h1> Transaction Result</h1>
         <p>
+            <i><b>Received data form(s) {{ data|length }} forms.</b></i><br>
             <strong>{{ forloop.counter }}</strong><br />
             {% for row in data %}
-            <strong>{{ row.0 }}:</strong> {{ row.1 }}{% if not forloop.last %}<br />{% endif %}
+            <b>Intern Name: {{ row.0 }}</b><br>
+            <b>Transaction Reference No.: {{ row.1.TransactionReference }}</b><br>
+            <b>Transaction Status: {{ row.1.Message }}</b><br>
+            <b>Response Code: {{ row.1.ResponseCode }}</b><br><br><br><br><br>{% if not forloop.last %}<br />{% endif %}
             {% endfor %}
         </p>
        

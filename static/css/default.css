@@ -7,8 +7,8 @@ Released for free under a Creative Commons Attribution 2.5 License
 body {
 	margin: 0;
 	padding: 0;
-	background:  #FFFFFF url(../images/bg01.jpg) repeat-x top left;
-	font-size: 13px;
+	background:  #FFFFFF url(../images/bg_nn1.jpg) repeat-x top left;
+	font-size: 20px;
 	color: #7F7F7F;
 }
 
@@ -25,8 +25,10 @@ h1, h2, h3 {
 h1 {
 	text-transform: lowercase;
 	letter-spacing: -1px;
-	font-size: 24px;
+	font-size: 33px;
+	color: #00AEFF;
 }
+
 
 h2 {
 	text-transform: lowercase;
@@ -278,10 +280,13 @@ a.download {
 /* Forms */
 
 form {
+	padding-top: 5px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 90%;
+	width: 100%;
+	padding-bottom: 70px;
 }
+
 form input[type="text"],
 form input[type="password"] {
 	width: 200px;
